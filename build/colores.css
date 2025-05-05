@@ -1,0 +1,61 @@
+:root {
+    /* Fondo general y texto */
+    --bs-body-bg: #121212;       /* Fondo general oscuro */
+    --bs-body-color: #f5f5f5;    /* Texto claro */
+
+    /* Colores para botones y fondos */
+    --bs-primary: #0d6efd;       /* Azul clásico de Bootstrap */
+    --bs-success: #1db954;       /* Verde tipo Spotify */
+    --bs-info: #17a2b8;          /* Cian profundo */
+    --bs-warning: #ffc107;       /* Amarillo mostaza */
+    --bs-danger: #dc3545;        /* Rojo */
+    --bs-light: #1f1f1f;         /* Gris muy oscuro */
+    --bs-dark: #000000;          /* Negro */
+
+    /* Bordes y enlaces */
+    --bs-border-color: #333333;
+    --bs-link-color: var(--bs-info);
+}
+
+#body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+/*
+.boton-indice {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.boton-indice span {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) translateX(0);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.boton-indice:hover span {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-100%);
+    pointer-events: auto;
+}*/
+
+.boton-indice span {
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .boton-indice:hover span {
+    max-width: 200px; /* Ajusta según lo que pueda medir el contenido */
+    opacity: 1;
+    margin-left: 10px;
+    color: var(--bs-success);
+  }
